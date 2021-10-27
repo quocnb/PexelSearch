@@ -13,9 +13,14 @@
 		79C36F4B2728D21B00677FF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79C36F492728D21B00677FF3 /* Main.storyboard */; };
 		79C36F4D2728D21F00677FF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79C36F4C2728D21F00677FF3 /* Assets.xcassets */; };
 		79C36F502728D21F00677FF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79C36F4E2728D21F00677FF3 /* LaunchScreen.storyboard */; };
+		79C36F582728EA5E00677FF3 /* Connector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C36F572728EA5E00677FF3 /* Connector.swift */; };
+		79C36F5A2728EAC900677FF3 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C36F592728EAC900677FF3 /* Photo.swift */; };
+		79C36F5C2729416600677FF3 /* ThumbCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C36F5B2729416600677FF3 /* ThumbCollectionViewCell.swift */; };
+		EA2CEE871CFA4A101F54C709 /* Pods_PexelSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E2B017A45AE70A8C1195BE7 /* Pods_PexelSearch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E2B017A45AE70A8C1195BE7 /* Pods_PexelSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PexelSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79C36F402728D21B00677FF3 /* PexelSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PexelSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79C36F432728D21B00677FF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79C36F452728D21B00677FF3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,11 @@
 		79C36F4C2728D21F00677FF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79C36F4F2728D21F00677FF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79C36F512728D21F00677FF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79C36F572728EA5E00677FF3 /* Connector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connector.swift; sourceTree = "<group>"; };
+		79C36F592728EAC900677FF3 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		79C36F5B2729416600677FF3 /* ThumbCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbCollectionViewCell.swift; sourceTree = "<group>"; };
+		8BEF540A43A0B2AFE5A8933D /* Pods-PexelSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PexelSearch.debug.xcconfig"; path = "Target Support Files/Pods-PexelSearch/Pods-PexelSearch.debug.xcconfig"; sourceTree = "<group>"; };
+		E7CFC402A762FE3158DBC83F /* Pods-PexelSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PexelSearch.release.xcconfig"; path = "Target Support Files/Pods-PexelSearch/Pods-PexelSearch.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA2CEE871CFA4A101F54C709 /* Pods_PexelSearch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E75162DEFDE4CA9DA985961 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E2B017A45AE70A8C1195BE7 /* Pods_PexelSearch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		79C36F372728D21A00677FF3 = {
 			isa = PBXGroup;
 			children = (
 				79C36F422728D21B00677FF3 /* PexelSearch */,
 				79C36F412728D21B00677FF3 /* Products */,
+				8FD14EEA39A5E41400D8CF8C /* Pods */,
+				5E75162DEFDE4CA9DA985961 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +84,20 @@
 				79C36F4C2728D21F00677FF3 /* Assets.xcassets */,
 				79C36F4E2728D21F00677FF3 /* LaunchScreen.storyboard */,
 				79C36F512728D21F00677FF3 /* Info.plist */,
+				79C36F572728EA5E00677FF3 /* Connector.swift */,
+				79C36F592728EAC900677FF3 /* Photo.swift */,
+				79C36F5B2729416600677FF3 /* ThumbCollectionViewCell.swift */,
 			);
 			path = PexelSearch;
+			sourceTree = "<group>";
+		};
+		8FD14EEA39A5E41400D8CF8C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8BEF540A43A0B2AFE5A8933D /* Pods-PexelSearch.debug.xcconfig */,
+				E7CFC402A762FE3158DBC83F /* Pods-PexelSearch.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79C36F542728D21F00677FF3 /* Build configuration list for PBXNativeTarget "PexelSearch" */;
 			buildPhases = (
+				C83F22D27064F913D90874A9 /* [CP] Check Pods Manifest.lock */,
 				79C36F3C2728D21A00677FF3 /* Sources */,
 				79C36F3D2728D21A00677FF3 /* Frameworks */,
 				79C36F3E2728D21A00677FF3 /* Resources */,
+				43702A058BECE15BE20F28B0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +168,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		43702A058BECE15BE20F28B0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PexelSearch/Pods-PexelSearch-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PexelSearch/Pods-PexelSearch-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PexelSearch/Pods-PexelSearch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C83F22D27064F913D90874A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PexelSearch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		79C36F3C2728D21A00677FF3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				79C36F482728D21B00677FF3 /* ViewController.swift in Sources */,
+				79C36F582728EA5E00677FF3 /* Connector.swift in Sources */,
 				79C36F442728D21B00677FF3 /* AppDelegate.swift in Sources */,
+				79C36F5C2729416600677FF3 /* ThumbCollectionViewCell.swift in Sources */,
 				79C36F462728D21B00677FF3 /* SceneDelegate.swift in Sources */,
+				79C36F5A2728EAC900677FF3 /* Photo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +297,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -272,7 +352,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -284,11 +364,13 @@
 		};
 		79C36F552728D21F00677FF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BEF540A43A0B2AFE5A8933D /* Pods-PexelSearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P954B8KACQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PexelSearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -305,17 +387,19 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		79C36F562728D21F00677FF3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7CFC402A762FE3158DBC83F /* Pods-PexelSearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P954B8KACQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PexelSearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -332,7 +416,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
