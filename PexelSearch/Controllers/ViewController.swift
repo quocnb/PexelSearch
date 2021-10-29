@@ -14,11 +14,9 @@ class ViewController: UIViewController {
 
     private let bag = DisposeBag()
     private let photos = BehaviorRelay<[Photo]>(value: [])
-    private let searchKeyword = PublishSubject<String>()
 
     @IBOutlet private weak var searchBar: UISearchBar!
     @IBOutlet private weak var photoCollectionView: UICollectionView!
-    @IBOutlet weak var layout: UICollectionViewFlowLayout!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,12 +44,19 @@ class ViewController: UIViewController {
         flowLayout.itemSize = CGSize(width: cellWidth, height: cellWidth * 5 / 7)
         photoCollectionView.setCollectionViewLayout(flowLayout, animated: true)
     }
+}
 
+// MARK: Bind data
+extension ViewController {
     private func bindData() {
+        // Dismiss keyboard when click search button
         searchBar.rx.searchButtonClicked.subscribe { [unowned self] _ in
             self.searchBar.endEditing(true)
         } .disposed(by: bag)
 
+        // Due to the guidelines of Pexel API Document, by default, the API is rate-limited
+        // to 200 requests per hour. So I won't support realtime search
+        // https://www.pexels.com/api/documentation/
         self.searchBar.rx.searchButtonClicked
             .map { [unowned self] _ in
                 return self.searchBar.text ?? ""
@@ -66,8 +71,10 @@ class ViewController: UIViewController {
             cell.label.text = photo.photographer
         }.disposed(by: bag)
     }
+}
 
-    // MARK: Api
+// MARK: Api
+extension ViewController {
     private func search(keyword: String, page: Int) {
         Connector.searchPhotos(keyword: keyword).subscribe { [unowned self] searchResult in
             if page == 1 {

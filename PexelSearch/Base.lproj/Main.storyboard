@@ -88,7 +88,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Pexel Search" id="wdv-Rr-VVg"/>
                     <connections>
-                        <outlet property="layout" destination="ibW-Mt-Xdd" id="JPd-cd-QTB"/>
                         <outlet property="photoCollectionView" destination="WoD-04-9qR" id="htb-TP-lbe"/>
                         <outlet property="searchBar" destination="Vyp-tX-nOD" id="aVu-Pe-l29"/>
                     </connections>

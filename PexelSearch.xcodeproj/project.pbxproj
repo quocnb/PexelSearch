@@ -79,19 +79,59 @@
 		79C36F422728D21B00677FF3 /* PexelSearch */ = {
 			isa = PBXGroup;
 			children = (
+				79C36F62272BB6DA00677FF3 /* Controllers */,
+				79C36F61272BB6C300677FF3 /* Views */,
+				79C36F5F272BB69100677FF3 /* API */,
+				79C36F60272BB6A700677FF3 /* Extensions */,
 				79C36F432728D21B00677FF3 /* AppDelegate.swift */,
 				79C36F452728D21B00677FF3 /* SceneDelegate.swift */,
-				79C36F472728D21B00677FF3 /* ViewController.swift */,
-				79C36F492728D21B00677FF3 /* Main.storyboard */,
 				79C36F4C2728D21F00677FF3 /* Assets.xcassets */,
-				79C36F4E2728D21F00677FF3 /* LaunchScreen.storyboard */,
 				79C36F512728D21F00677FF3 /* Info.plist */,
-				79C36F572728EA5E00677FF3 /* Connector.swift */,
-				79C36F592728EAC900677FF3 /* Photo.swift */,
-				79C36F5B2729416600677FF3 /* ThumbCollectionViewCell.swift */,
-				79C36F5D272B3CC300677FF3 /* Extensions.swift */,
 			);
 			path = PexelSearch;
+			sourceTree = "<group>";
+		};
+		79C36F5F272BB69100677FF3 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				79C36F572728EA5E00677FF3 /* Connector.swift */,
+				79C36F592728EAC900677FF3 /* Photo.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		79C36F60272BB6A700677FF3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				79C36F5D272B3CC300677FF3 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		79C36F61272BB6C300677FF3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				79C36F492728D21B00677FF3 /* Main.storyboard */,
+				79C36F4E2728D21F00677FF3 /* LaunchScreen.storyboard */,
+				79C36F63272BB72300677FF3 /* CustomViews */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		79C36F62272BB6DA00677FF3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				79C36F472728D21B00677FF3 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		79C36F63272BB72300677FF3 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				79C36F5B2729416600677FF3 /* ThumbCollectionViewCell.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		8FD14EEA39A5E41400D8CF8C /* Pods */ = {
