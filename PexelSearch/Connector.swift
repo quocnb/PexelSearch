@@ -11,8 +11,8 @@ import RxSwift
 import RxAlamofire
 
 class Connector {
-    static func searchPhotos(keyword: String) -> Observable<SearchResult> {
-        RxAlamofire.request(ApiUrl.searchPhotos(keyword)).responseJSON()
+    static func searchPhotos(keyword: String, page: Int) -> Observable<SearchResult> {
+        RxAlamofire.request(ApiUrl.searchPhotos(keyword: keyword, page: page)).responseJSON()
             .catch { err in
                 return Observable.empty()
             }.map { response in
@@ -29,7 +29,7 @@ enum ApiUrl: URLRequestConvertible {
     static let PEXEL_API_KEY = "563492ad6f917000010000016df13a6f527146baa1f6bd81fb8b93bd"
 
     // API document https://www.pexels.com/api/documentation/#photos-search
-    case searchPhotos(String)
+    case searchPhotos(keyword: String, page: Int)
 
     var method: HTTPMethod {
         return .get
@@ -47,9 +47,11 @@ enum ApiUrl: URLRequestConvertible {
     }
     var parameters: Parameters {
         switch self {
-            case .searchPhotos(let keyword):
+            // Only get 30 photos for display and performace purpose
+            case .searchPhotos(let keyword, let page):
                 return ["query": keyword,
-                        "per_page": 30
+                        "per_page": 30,
+                        "page": page
                 ]
         }
     }

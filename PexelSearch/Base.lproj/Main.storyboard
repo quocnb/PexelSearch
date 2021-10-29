@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="👀 4 something?" translatesAutoresizingMaskIntoConstraints="NO" id="Vyp-tX-nOD">
+                            <searchBar contentMode="redraw" placeholder="👀 4 something awesome" translatesAutoresizingMaskIntoConstraints="NO" id="Vyp-tX-nOD">
                                 <rect key="frame" x="0.0" y="88" width="414" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Bw3-uS-FEm"/>

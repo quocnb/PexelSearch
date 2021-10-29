@@ -14,6 +14,9 @@ class ViewController: UIViewController {
 
     private let bag = DisposeBag()
     private let photos = BehaviorRelay<[Photo]>(value: [])
+    private var isRequesting = false
+    private var currentPage = 1
+    private var hasNextPage = false
 
     @IBOutlet private weak var searchBar: UISearchBar!
     @IBOutlet private weak var photoCollectionView: UICollectionView!
@@ -70,19 +73,35 @@ extension ViewController {
             cell.imageView?.sd_setImage(with: photo.thumbUrl(), completed: nil)
             cell.label.text = photo.photographer
         }.disposed(by: bag)
+
+        photoCollectionView.rx.willDisplayCell.filter { [unowned self](cell: UICollectionViewCell, idp: IndexPath) in
+            idp.row >= (self.photos.value.count - 1) && !isRequesting && hasNextPage
+        }.subscribe { [unowned self](cell: UICollectionViewCell, at: IndexPath) in
+            self.search(keyword: self.searchBar.text ?? "", page: self.currentPage + 1)
+        }.disposed(by: bag)
+
     }
 }
 
 // MARK: Api
 extension ViewController {
     private func search(keyword: String, page: Int) {
-        Connector.searchPhotos(keyword: keyword).subscribe { [unowned self] searchResult in
+        // Only 1 request at once
+        if (isRequesting) {
+            return
+        }
+        isRequesting = true
+        Connector.searchPhotos(keyword: keyword, page: page).subscribe { [unowned self] searchResult in
             if page == 1 {
                 self.photos.accept(searchResult.photos)
             } else {
                 self.photos.accept(self.photos.value + searchResult.photos)
             }
-        } onError: { error in
+            self.isRequesting = false
+            currentPage = page
+            hasNextPage = searchResult.nextPage != nil
+        } onError: { [unowned self] error in
+            self.isRequesting = false
             self.showErrorAlert(message: error.localizedDescription)
         }.disposed(by: bag)
     }
