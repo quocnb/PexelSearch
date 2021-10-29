@@ -25,7 +25,7 @@ class PhotoSource: Codable {
 }
 
 class SearchResult: Codable {
-    let nextPage: String
+    let nextPage: String?
     let photos: [Photo]
 
     init() {

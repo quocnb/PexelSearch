@@ -28,6 +28,7 @@ enum ApiUrl: URLRequestConvertible {
     static let BASE_URL = "https://api.pexels.com/v1"
     static let PEXEL_API_KEY = "563492ad6f917000010000016df13a6f527146baa1f6bd81fb8b93bd"
 
+    // API document https://www.pexels.com/api/documentation/#photos-search
     case searchPhotos(String)
 
     var method: HTTPMethod {
@@ -47,7 +48,9 @@ enum ApiUrl: URLRequestConvertible {
     var parameters: Parameters {
         switch self {
             case .searchPhotos(let keyword):
-                return ["query": keyword]
+                return ["query": keyword,
+                        "per_page": 30
+                ]
         }
     }
 

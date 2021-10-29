@@ -16,6 +16,7 @@
 		79C36F582728EA5E00677FF3 /* Connector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C36F572728EA5E00677FF3 /* Connector.swift */; };
 		79C36F5A2728EAC900677FF3 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C36F592728EAC900677FF3 /* Photo.swift */; };
 		79C36F5C2729416600677FF3 /* ThumbCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C36F5B2729416600677FF3 /* ThumbCollectionViewCell.swift */; };
+		79C36F5E272B3CC300677FF3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C36F5D272B3CC300677FF3 /* Extensions.swift */; };
 		EA2CEE871CFA4A101F54C709 /* Pods_PexelSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E2B017A45AE70A8C1195BE7 /* Pods_PexelSearch.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		79C36F572728EA5E00677FF3 /* Connector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connector.swift; sourceTree = "<group>"; };
 		79C36F592728EAC900677FF3 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		79C36F5B2729416600677FF3 /* ThumbCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbCollectionViewCell.swift; sourceTree = "<group>"; };
+		79C36F5D272B3CC300677FF3 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8BEF540A43A0B2AFE5A8933D /* Pods-PexelSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PexelSearch.debug.xcconfig"; path = "Target Support Files/Pods-PexelSearch/Pods-PexelSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		E7CFC402A762FE3158DBC83F /* Pods-PexelSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PexelSearch.release.xcconfig"; path = "Target Support Files/Pods-PexelSearch/Pods-PexelSearch.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +89,7 @@
 				79C36F572728EA5E00677FF3 /* Connector.swift */,
 				79C36F592728EAC900677FF3 /* Photo.swift */,
 				79C36F5B2729416600677FF3 /* ThumbCollectionViewCell.swift */,
+				79C36F5D272B3CC300677FF3 /* Extensions.swift */,
 			);
 			path = PexelSearch;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				79C36F5C2729416600677FF3 /* ThumbCollectionViewCell.swift in Sources */,
 				79C36F462728D21B00677FF3 /* SceneDelegate.swift in Sources */,
 				79C36F5A2728EAC900677FF3 /* Photo.swift in Sources */,
+				79C36F5E272B3CC300677FF3 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
