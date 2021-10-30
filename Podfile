@@ -9,3 +9,8 @@ target 'PexelSearch' do
     pod 'SDWebImage', '~> 5.0'
 end
 
+target 'PexelSearchTests' do
+    pod 'RxSwift', '6.2.0'
+    pod 'RxAlamofire'
+end
+

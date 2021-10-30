@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54855555AC1CF0E122717333 /* Pods_PexelSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D96CC9F431C9266D7F8EDE85 /* Pods_PexelSearchTests.framework */; };
 		79C36F442728D21B00677FF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C36F432728D21B00677FF3 /* AppDelegate.swift */; };
 		79C36F462728D21B00677FF3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C36F452728D21B00677FF3 /* SceneDelegate.swift */; };
 		79C36F482728D21B00677FF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C36F472728D21B00677FF3 /* ViewController.swift */; };
@@ -18,11 +19,26 @@
 		79C36F5C2729416600677FF3 /* ThumbCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C36F5B2729416600677FF3 /* ThumbCollectionViewCell.swift */; };
 		79C36F5E272B3CC300677FF3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C36F5D272B3CC300677FF3 /* Extensions.swift */; };
 		79C36F65272C945A00677FF3 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C36F64272C945A00677FF3 /* PreviewViewController.swift */; };
+		79C36F6D272DD75F00677FF3 /* PexelSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C36F6C272DD75F00677FF3 /* PexelSearchTests.swift */; };
+		79C36F73272DD78C00677FF3 /* Connector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C36F572728EA5E00677FF3 /* Connector.swift */; };
+		79C36F74272DE3A200677FF3 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C36F592728EAC900677FF3 /* Photo.swift */; };
 		EA2CEE871CFA4A101F54C709 /* Pods_PexelSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E2B017A45AE70A8C1195BE7 /* Pods_PexelSearch.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		79C36F6E272DD75F00677FF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79C36F382728D21A00677FF3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79C36F3F2728D21A00677FF3;
+			remoteInfo = PexelSearch;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0E2B017A45AE70A8C1195BE7 /* Pods_PexelSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PexelSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47BFCFC64404E9D46D6005E7 /* Pods-PexelSearchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PexelSearchTests.debug.xcconfig"; path = "Target Support Files/Pods-PexelSearchTests/Pods-PexelSearchTests.debug.xcconfig"; sourceTree = "<group>"; };
+		737CB96B2D0B2E7A9848D70E /* Pods-PexelSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PexelSearchTests.release.xcconfig"; path = "Target Support Files/Pods-PexelSearchTests/Pods-PexelSearchTests.release.xcconfig"; sourceTree = "<group>"; };
 		79C36F402728D21B00677FF3 /* PexelSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PexelSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79C36F432728D21B00677FF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79C36F452728D21B00677FF3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,7 +52,10 @@
 		79C36F5B2729416600677FF3 /* ThumbCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbCollectionViewCell.swift; sourceTree = "<group>"; };
 		79C36F5D272B3CC300677FF3 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		79C36F64272C945A00677FF3 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		79C36F6A272DD75F00677FF3 /* PexelSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PexelSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		79C36F6C272DD75F00677FF3 /* PexelSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PexelSearchTests.swift; sourceTree = "<group>"; };
 		8BEF540A43A0B2AFE5A8933D /* Pods-PexelSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PexelSearch.debug.xcconfig"; path = "Target Support Files/Pods-PexelSearch/Pods-PexelSearch.debug.xcconfig"; sourceTree = "<group>"; };
+		D96CC9F431C9266D7F8EDE85 /* Pods_PexelSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PexelSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7CFC402A762FE3158DBC83F /* Pods-PexelSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PexelSearch.release.xcconfig"; path = "Target Support Files/Pods-PexelSearch/Pods-PexelSearch.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,6 +68,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		79C36F67272DD75F00677FF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54855555AC1CF0E122717333 /* Pods_PexelSearchTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -56,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				0E2B017A45AE70A8C1195BE7 /* Pods_PexelSearch.framework */,
+				D96CC9F431C9266D7F8EDE85 /* Pods_PexelSearchTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -64,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				79C36F422728D21B00677FF3 /* PexelSearch */,
+				79C36F6B272DD75F00677FF3 /* PexelSearchTests */,
 				79C36F412728D21B00677FF3 /* Products */,
 				8FD14EEA39A5E41400D8CF8C /* Pods */,
 				5E75162DEFDE4CA9DA985961 /* Frameworks */,
@@ -74,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				79C36F402728D21B00677FF3 /* PexelSearch.app */,
+				79C36F6A272DD75F00677FF3 /* PexelSearchTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,11 +167,21 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
+		79C36F6B272DD75F00677FF3 /* PexelSearchTests */ = {
+			isa = PBXGroup;
+			children = (
+				79C36F6C272DD75F00677FF3 /* PexelSearchTests.swift */,
+			);
+			path = PexelSearchTests;
+			sourceTree = "<group>";
+		};
 		8FD14EEA39A5E41400D8CF8C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				8BEF540A43A0B2AFE5A8933D /* Pods-PexelSearch.debug.xcconfig */,
 				E7CFC402A762FE3158DBC83F /* Pods-PexelSearch.release.xcconfig */,
+				47BFCFC64404E9D46D6005E7 /* Pods-PexelSearchTests.debug.xcconfig */,
+				737CB96B2D0B2E7A9848D70E /* Pods-PexelSearchTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -168,6 +208,26 @@
 			productReference = 79C36F402728D21B00677FF3 /* PexelSearch.app */;
 			productType = "com.apple.product-type.application";
 		};
+		79C36F69272DD75F00677FF3 /* PexelSearchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79C36F70272DD75F00677FF3 /* Build configuration list for PBXNativeTarget "PexelSearchTests" */;
+			buildPhases = (
+				BAB70E9A9293D91C1A628F74 /* [CP] Check Pods Manifest.lock */,
+				79C36F66272DD75F00677FF3 /* Sources */,
+				79C36F67272DD75F00677FF3 /* Frameworks */,
+				79C36F68272DD75F00677FF3 /* Resources */,
+				2E6664DDF81BD1D08514BADD /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				79C36F6F272DD75F00677FF3 /* PBXTargetDependency */,
+			);
+			name = PexelSearchTests;
+			productName = PexelSearchTests;
+			productReference = 79C36F6A272DD75F00677FF3 /* PexelSearchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -180,6 +240,10 @@
 				TargetAttributes = {
 					79C36F3F2728D21A00677FF3 = {
 						CreatedOnToolsVersion = 13.1;
+					};
+					79C36F69272DD75F00677FF3 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 79C36F3F2728D21A00677FF3;
 					};
 				};
 			};
@@ -197,6 +261,7 @@
 			projectRoot = "";
 			targets = (
 				79C36F3F2728D21A00677FF3 /* PexelSearch */,
+				79C36F69272DD75F00677FF3 /* PexelSearchTests */,
 			);
 		};
 /* End PBXProject section */
@@ -212,9 +277,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		79C36F68272DD75F00677FF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2E6664DDF81BD1D08514BADD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PexelSearchTests/Pods-PexelSearchTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PexelSearchTests/Pods-PexelSearchTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PexelSearchTests/Pods-PexelSearchTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		43702A058BECE15BE20F28B0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -230,6 +319,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PexelSearch/Pods-PexelSearch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAB70E9A9293D91C1A628F74 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PexelSearchTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C83F22D27064F913D90874A9 /* [CP] Check Pods Manifest.lock */ = {
@@ -272,7 +383,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		79C36F66272DD75F00677FF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79C36F74272DE3A200677FF3 /* Photo.swift in Sources */,
+				79C36F6D272DD75F00677FF3 /* PexelSearchTests.swift in Sources */,
+				79C36F73272DD78C00677FF3 /* Connector.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		79C36F6F272DD75F00677FF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79C36F3F2728D21A00677FF3 /* PexelSearch */;
+			targetProxy = 79C36F6E272DD75F00677FF3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		79C36F492728D21B00677FF3 /* Main.storyboard */ = {
@@ -468,6 +597,54 @@
 			};
 			name = Release;
 		};
+		79C36F71272DD75F00677FF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47BFCFC64404E9D46D6005E7 /* Pods-PexelSearchTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quocnb.test.PexelSearchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PexelSearch.app/PexelSearch";
+			};
+			name = Debug;
+		};
+		79C36F72272DD75F00677FF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 737CB96B2D0B2E7A9848D70E /* Pods-PexelSearchTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quocnb.test.PexelSearchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PexelSearch.app/PexelSearch";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -485,6 +662,15 @@
 			buildConfigurations = (
 				79C36F552728D21F00677FF3 /* Debug */,
 				79C36F562728D21F00677FF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79C36F70272DD75F00677FF3 /* Build configuration list for PBXNativeTarget "PexelSearchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79C36F71272DD75F00677FF3 /* Debug */,
+				79C36F72272DD75F00677FF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
