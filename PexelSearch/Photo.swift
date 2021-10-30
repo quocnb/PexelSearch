@@ -20,6 +20,10 @@ class Photo: Codable {
     func thumbUrl() -> URL? {
         return URL(string: src.tiny)
     }
+
+    func originalPhotoUrl() -> URL? {
+        return URL(string: src.original)
+    }
 }
 
 class PhotoSource: Codable {

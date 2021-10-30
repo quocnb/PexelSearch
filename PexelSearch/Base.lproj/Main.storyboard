@@ -73,14 +73,35 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eot-yg-RJu">
+                                <rect key="frame" x="0.0" y="832" width="414" height="30"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="S3H-QV-IGi">
+                                        <rect key="frame" x="197" y="5" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="S3H-QV-IGi" secondAttribute="height" multiplier="1:1" id="dWt-yF-ik5"/>
+                                        </constraints>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="S3H-QV-IGi" firstAttribute="centerY" secondItem="eot-yg-RJu" secondAttribute="centerY" id="8yU-nC-1FA"/>
+                                    <constraint firstItem="S3H-QV-IGi" firstAttribute="height" secondItem="eot-yg-RJu" secondAttribute="height" multiplier="0.666667" id="L6M-r6-Yqk"/>
+                                    <constraint firstAttribute="height" constant="30" id="vs3-SR-a4g"/>
+                                    <constraint firstItem="S3H-QV-IGi" firstAttribute="centerX" secondItem="eot-yg-RJu" secondAttribute="centerX" id="x9s-Pd-NoJ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="eot-yg-RJu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1FJ-4P-jqB"/>
                             <constraint firstItem="Vyp-tX-nOD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8gj-P5-FC3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WoD-04-9qR" secondAttribute="bottom" id="ERt-Oh-BNR"/>
                             <constraint firstItem="Vyp-tX-nOD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Hm9-Ko-Gkt"/>
                             <constraint firstItem="WoD-04-9qR" firstAttribute="top" secondItem="Vyp-tX-nOD" secondAttribute="bottom" constant="10" id="JbJ-Ze-o6x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eot-yg-RJu" secondAttribute="bottom" id="Qre-4b-PmW"/>
+                            <constraint firstItem="eot-yg-RJu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Z6d-3X-kd5"/>
                             <constraint firstItem="Vyp-tX-nOD" firstAttribute="leading" secondItem="WoD-04-9qR" secondAttribute="leading" id="pJ3-Nm-4tm"/>
                             <constraint firstItem="Vyp-tX-nOD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sfV-Fc-dUk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WoD-04-9qR" secondAttribute="trailing" id="uav-lO-9UG"/>
@@ -88,6 +109,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Pexel Search" id="wdv-Rr-VVg"/>
                     <connections>
+                        <outlet property="loadingIndicator" destination="S3H-QV-IGi" id="1S1-W8-ZSO"/>
+                        <outlet property="loadingView" destination="eot-yg-RJu" id="HVx-1x-kxi"/>
                         <outlet property="photoCollectionView" destination="WoD-04-9qR" id="htb-TP-lbe"/>
                         <outlet property="searchBar" destination="Vyp-tX-nOD" id="aVu-Pe-l29"/>
                     </connections>
@@ -95,6 +118,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="926.08695652173924" y="83.705357142857139"/>
+        </scene>
+        <!--Preview View Controller-->
+        <scene sceneID="psk-dY-hS7">
+            <objects>
+                <viewController storyboardIdentifier="PreviewViewController" id="ges-Ez-atR" customClass="PreviewViewController" customModule="PexelSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LEH-Qa-pJt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EGO-7S-dCb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eKV-nc-NJY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EGO-7S-dCb" firstAttribute="top" secondItem="eKV-nc-NJY" secondAttribute="top" id="NMT-aD-qDl"/>
+                            <constraint firstItem="eKV-nc-NJY" firstAttribute="bottom" secondItem="EGO-7S-dCb" secondAttribute="bottom" id="R2M-3Z-kEX"/>
+                            <constraint firstItem="EGO-7S-dCb" firstAttribute="leading" secondItem="eKV-nc-NJY" secondAttribute="leading" id="Zfs-qV-vNx"/>
+                            <constraint firstItem="eKV-nc-NJY" firstAttribute="trailing" secondItem="EGO-7S-dCb" secondAttribute="trailing" id="aiu-lr-U6N"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="O7k-Ek-xjw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="hWl-gy-0Ab">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="closeButton" destination="hWl-gy-0Ab" id="zdJ-vZ-WO7"/>
+                        <outlet property="imageView" destination="EGO-7S-dCb" id="hx4-Pg-ibW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bny-Ky-GKy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3437.68115942029" y="83.705357142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LHJ-uc-FMx">
@@ -113,6 +171,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rym-0I-UOj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="83.705357142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IHy-4s-QV2">
+            <objects>
+                <navigationController storyboardIdentifier="PreviewNav" automaticallyAdjustsScrollViewInsets="NO" id="NIs-my-65q" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KAm-da-hpc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ges-Ez-atR" kind="relationship" relationship="rootViewController" id="Ndw-hY-5gf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wk6-80-IT3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2530.434782608696" y="83.705357142857139"/>
         </scene>
     </scenes>
     <resources>

@@ -14,10 +14,12 @@ class ViewController: UIViewController {
 
     private let bag = DisposeBag()
     private let photos = BehaviorRelay<[Photo]>(value: [])
-    private var isRequesting = false
+    private let isRequesting = BehaviorRelay<Bool>(value: false)
     private var currentPage = 1
     private var hasNextPage = false
 
+    @IBOutlet weak var loadingView: UIView!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet private weak var searchBar: UISearchBar!
     @IBOutlet private weak var photoCollectionView: UICollectionView!
 
@@ -75,11 +77,23 @@ extension ViewController {
         }.disposed(by: bag)
 
         photoCollectionView.rx.willDisplayCell.filter { [unowned self](cell: UICollectionViewCell, idp: IndexPath) in
-            idp.row >= (self.photos.value.count - 1) && !isRequesting && hasNextPage
+            idp.row >= (self.photos.value.count - 1) && !isRequesting.value && hasNextPage
         }.subscribe { [unowned self](cell: UICollectionViewCell, at: IndexPath) in
             self.search(keyword: self.searchBar.text ?? "", page: self.currentPage + 1)
         }.disposed(by: bag)
 
+        Observable.zip(photoCollectionView.rx.itemSelected, photoCollectionView.rx.modelSelected(Photo.self)).subscribe(onNext: { [unowned self] indexPath, photo in
+            self.showPreview(photo: photo, at: indexPath)
+        }).disposed(by: bag)
+
+        isRequesting.subscribe(onNext: { [unowned self] requesting in
+            self.loadingView.isHidden = !requesting
+            if requesting {
+                self.loadingIndicator.startAnimating()
+            } else {
+                self.loadingIndicator.stopAnimating()
+            }
+        }).disposed(by: bag)
     }
 }
 
@@ -87,22 +101,41 @@ extension ViewController {
 extension ViewController {
     private func search(keyword: String, page: Int) {
         // Only 1 request at once
-        if (isRequesting) {
+        if (isRequesting.value) {
             return
         }
-        isRequesting = true
+        isRequesting.accept(true)
         Connector.searchPhotos(keyword: keyword, page: page).subscribe { [unowned self] searchResult in
             if page == 1 {
                 self.photos.accept(searchResult.photos)
             } else {
                 self.photos.accept(self.photos.value + searchResult.photos)
             }
-            self.isRequesting = false
+            isRequesting.accept(false)
             currentPage = page
             hasNextPage = searchResult.nextPage != nil
         } onError: { [unowned self] error in
-            self.isRequesting = false
+            isRequesting.accept(false)
             self.showErrorAlert(message: error.localizedDescription)
         }.disposed(by: bag)
+    }
+}
+
+// MARK: View flow
+extension ViewController {
+    private func showPreview(photo: Photo, at indexPath: IndexPath) {
+        guard let previewNav = storyboard?.instantiateViewController(withIdentifier: "PreviewNav") as? UINavigationController else {
+            return;
+        }
+        guard let previewVC = previewNav.topViewController as? PreviewViewController else {
+            return;
+        }
+        guard let cell = photoCollectionView.cellForItem(at: indexPath) as? ThumbCollectionViewCell else {
+            return
+        }
+        previewVC.photo = photo
+        previewVC.thumb = cell.imageView.image
+
+        self.present(previewNav, animated: true, completion: nil)
     }
 }
